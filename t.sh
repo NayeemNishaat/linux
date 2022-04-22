@@ -124,6 +124,8 @@ curl --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
 # egrep -wo 'th.[a-z]*' doc.txt ### With regex
 # Replace on the fly and print
 # cat t.txt | sed "s/ /<SPACE>/g"
+# echo -e "text gh" | sed "s/ /<SPACE>/g"
+# sed 's/\\n/ /g' res.txt
 
 # Extract all links with positive lookbehind
 # cat doc.txt | grep -Po '(?<=href=")[^"]*'
