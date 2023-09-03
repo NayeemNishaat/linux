@@ -50,3 +50,4 @@
 # ls -li # show file i node number
 # ln ../b fx # create hard link
 # rm b # remove hard link, will not affect the hard link file fx but updating one of them will update both
+# find ../.. -samefile fxx # find ../.. -inum 20948039
