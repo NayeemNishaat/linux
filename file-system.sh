@@ -36,7 +36,7 @@
 # ls ? # return files with a single char
 # ls ?abc*
 # ls [ax]* # it will only list files also files from sub directories
-# ls *[ax]* | more # any a or x any
+# ls *[ax]* | more # any a or x any with paginated view
 
 # WRITE TO FILE
 # echo "abc" > a-back # clean and write
@@ -46,3 +46,6 @@
 # ln -s ../ab ./test/ab-backup # create a soft link
 # echo "abc" > ab-backup # write to the original file using the soft link
 # rm ab-backup # deleted the soft link won't delete the original file
+# ls -li # show file i node number
+# ln ../b fx # create hard link
+# rm b # remove hard link, will not affect the hard link file fx but updating one of them will update both
