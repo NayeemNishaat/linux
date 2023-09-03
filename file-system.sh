@@ -9,3 +9,10 @@
 
 # cp a b # copy a to b (create b if doesn't exist and then copy)
 # vi a # create file name a (in vim :w can be used to save/write current content)
+
+# cp -r test ./abc/test-backup # Note the abc folder must exist
+
+# mv a ../dir # move file a to directory dir
+
+# locate filename # This will give the absolute path of the file
+# find . -name 'file-name' # This will try to find the file from . directory
