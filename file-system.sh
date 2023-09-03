@@ -6,3 +6,6 @@
 # passwd nayeem # Change password for nayeem
 
 # ls -ltr # list all in reverse time order
+
+# cp a b # copy a to b (create b if doesn't exist and then copy)
+# vi a # create file name a (in vim :w can be used to save/write current content)
