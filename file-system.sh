@@ -37,3 +37,12 @@
 # ls ?abc*
 # ls [ax]* # it will only list files also files from sub directories
 # ls *[ax]* | more # any a or x any
+
+# WRITE TO FILE
+# echo "abc" > a-back # clean and write
+# echo "abc" >> a-back # append to file if doesn't exist create and append
+
+# LINK
+# ln -s ../ab ./test/ab-backup # create a soft link
+# echo "abc" > ab-backup # write to the original file using the soft link
+# rm ab-backup # deleted the soft link won't delete the original file
