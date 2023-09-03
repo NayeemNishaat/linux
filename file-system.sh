@@ -31,3 +31,6 @@
 # [] -> range of chars (te[a-z]t)
 
 # touch file-{0..9} # create multiple files from 0-9
+# ls file* # list all files where name starting with file
+# rm file* # remove all files where name starting with file
+# ls ? # return files with a single char
