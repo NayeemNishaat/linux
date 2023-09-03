@@ -43,6 +43,7 @@
 # echo "abc" >> a-back # append to file if doesn't exist create and append
 
 # LINK
+# Warining: Hard link only works in same partition
 # ln -s ../ab ./test/ab-backup # create a soft link
 # echo "abc" > ab-backup # write to the original file using the soft link
 # rm ab-backup # deleted the soft link won't delete the original file
