@@ -4,6 +4,7 @@
 # -rw-r--r--@ 1 labyrinth  staff   29615 Jan 19  2023 tbl statement.pdf (Normal File)
 # - -> Regular file, d -> directory file, l -> link file, c -> special/device file, s -> socket file, p -> named pipe file, b -> block device file
 # ls -ltr # list all in reverse time order
+# ls -ltr file.txt # list only file.txt (file.txt is the argument)
 
 # CHANGE PASSWORD
 # passwd nayeem # Change password for nayeem
