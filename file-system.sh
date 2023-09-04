@@ -50,4 +50,10 @@
 # ls -li # show file i node number
 # ln ../b fx # create hard link
 # rm b # remove hard link, will not affect the hard link file fx but updating one of them will update both
-# find ../.. -samefile fxx # find ../.. -inum 20948039
+
+# FIND
+# find . -name 'pattern' # basic find
+# find . ! -name 'pattern'
+# find . -name "*.vtt" ! -name "*English*" -delete # find all .vtt except one containing english and delete
+# find ../.. -samefile fxx # find hardlinks
+# find ../.. -inum 20948039 # find file with same inode number (hard link)
