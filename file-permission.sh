@@ -24,3 +24,12 @@
 # chgrp staff Admanager.pdf
 
 # Warning: Although a file is owned by root and no permission to user/group/other this file can still be deleted if the parent directories are owned by the current user and has appropriate permissions.
+
+# ACL
+# setfacl -m u:user:rwx /var/tmp/file # add permission for user
+# setfacl -m g:group:rw /var/tmp/file # add permission for group
+# setfacl -Rm u:foo:rwX,d:u:foo:rwX /path/to/dir # recursively allow all files under the dir to inherit acl entries from the dir it is within (X only allows execute to folder not file but x for all)
+# setfacl -x u:user /path/to/file # remove an entry
+# setfacl -b /path/to/file # remove all entries for all users
+# write permission with acl won't allow to delete the file but write. + will be added if contains acl in permission column
+# getfacl file # get file acl
