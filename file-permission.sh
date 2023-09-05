@@ -22,6 +22,7 @@
 # Important: Only root user can change ownership of a file
 # chown root Admanager.pdf
 # chgrp staff Admanager.pdf
+# chown nayeem:nayeem laby # this will change owner and group to laby
 
 # Warning: Although a file is owned by root and no permission to user/group/other this file can still be deleted if the parent directories are owned by the current user and has appropriate permissions.
 
