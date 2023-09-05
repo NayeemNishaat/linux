@@ -55,3 +55,19 @@
 
 # RMDIR
 # rmdir empty-dir-name
+
+# CAT
+# cat file
+
+# MORE
+# more file
+
+# LESS
+# Note: reverse order one page at a time
+# less file
+
+# HEAD
+# head -2 file
+
+# TAIL
+# tail -2 file
