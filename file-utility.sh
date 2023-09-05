@@ -21,3 +21,37 @@
 # ls >> file 2>&1 # redirect std out and std err to file
 
 # TEE
+# Note: tee can be used to output data to file and screen both
+# echo "HEllo MF" | tee file
+# echo "HEllo MF" | tee -a file # append
+# wc -c file # show chars of a file
+# echo "HEllo MF" | tee -a file1 file2 # output to multiple file
+
+# PIPE
+# ls | more
+# cat file | more # hit space to view next page, q -> quit, down arrow -> 1 more line
+# ll | tail -1 # view last line
+
+# CP
+# cp file newfile
+# cp file new-loc
+# cp file new-loc/newfile
+# cp -r folder new-location
+# cp -r folder new-location/renamed-folder
+
+# RM
+# rm file
+# rm -r folder
+# rm -rf folder
+
+# MV
+# mv a b
+# mv a ../
+# mv a ../b
+# mv a b c ./abc
+
+# MKDIR
+# mkdir folder
+
+# RMDIR
+# rmdir empty-dir-name
