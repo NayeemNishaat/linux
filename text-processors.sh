@@ -11,3 +11,9 @@
 # ll | cut -d ' '  -f 2 # space delimiter
 # ll | cut -d$'\t'  -f 1 # tab delimiter (Press Ctrl+V and then Tab to use "verbatim" quoted insert.)
 # ll | cut -f 1 # tab is default
+
+# AWK
+# awk '{print $1}' file # get first word
+# ll | awk '{print $1,$9}' # print 1st and 9th cols of the output of ll
+# ll | awk '{print $NF}' # get last col
+# ll | awk 'FNR > 1 {print $NF}' # get last col for rows > 1 other ops are =,< etc.
