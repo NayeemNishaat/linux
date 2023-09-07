@@ -38,7 +38,33 @@
 # grep -ivn it file | awk 'FNR==1 {print $2}' # 1st row 2nd col
 # grep -ivn it file | awk 'FNR==1 {print $0}' | cut -c 3- # grep it awk it and cut it from 3 to end
 # ll | grep file$ # return lines where the lines contain words that end with file
+# grep -o it file
 
 # EGREP
 # Note: Used for searching multiple words
 # egrep -i "it|abc" file # will search it and abc
+
+# SORT
+# sort file # sort the file alphabeticaly
+# sort -r file # sort in reverse order
+# sort -k 2 file # sort using 2nd col
+# ll | sort -k9
+
+# UNIQ
+# Warining: use sort first and pipe it to uniq to make it work
+# sort file | uniq
+# sort file | uniq -c # uniq with duplicate count
+# sort file | uniq -d # show only repeated lines
+# ll | sort | uniq
+
+# WC
+# wc file # will return # of lines, # of words, # of bytes and file name
+# wc -l file # only return # of lines and file name (-w for words and -c for bytes)
+# ll | wc -l # count lines in ll
+# ll | grep d | wc -l
+
+# DIFF
+# diff file1 file2 # find difference in file1 and file2
+
+# CMP
+# cmp file1 file2 # compare file1 and file2
