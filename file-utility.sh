@@ -71,3 +71,7 @@
 
 # TAIL
 # tail -2 file
+
+# TRUNCATE
+# truncate -s 9 file # truncate the file to 9 bytes
+# truncate -s 100 file-backup # if size is greater than original file size then truncate will all empty characters to the file to increate the size
