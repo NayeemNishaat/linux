@@ -75,3 +75,11 @@
 # TRUNCATE
 # truncate -s 9 file # truncate the file to 9 bytes
 # truncate -s 100 file-backup # if size is greater than original file size then truncate will all empty characters to the file to increate the size
+
+# SPLIT
+# split -l 2 file sep- # split the file by 2 lines and new sub file name is sep-
+
+# MERGE
+# cat sep-aa sep-ab sep-ac >> joined # concat files to one file
+# cat sep-aa sep-ab sep-ac > joinedx
+# cat sep-* > joinedx
