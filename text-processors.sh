@@ -26,3 +26,12 @@
 # awk 'length($0) > 15' file # get lines that have more than 15 bytes
 # ll | awk '{if($9=="file")print $0}' # get rows where col 9 matches 'file'
 # ll | awk '{print NF}' # will retun # of cols in each row
+
+# GREP
+# grep abc file # find abc in file
+# grep -c it file # will just return the count
+# grep -i fuck file # ignore case
+# grep -in it file # return result with line number
+# grep -v it file get all the lines where 'it' doesn't exist
+# grep -ivn it file | awk '{print $1}' # get first col and all rows of grep
+# grep -ivn it file | awk 'FNR==1 {print}' # get first row and all cols of grep
