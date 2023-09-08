@@ -2,6 +2,6 @@ sudo mysql_secure_installation
 vi  /etc/mysql/mysql.conf.d/mysqld.cnf (change bind address to 0.0.0.0)
 sudo systemctl restart mysql
 mysql -u root
-CREATE USER 'sammy'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'%' WITH GRANT OPTION;
+CREATE USER 'USERNAME'@'localhost' IDENTIFIED BY 'PASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'1.2.3.4' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
