@@ -1,2 +1,2 @@
 # Linux
-## Its ALl About Linux
+## Its All About Linux
