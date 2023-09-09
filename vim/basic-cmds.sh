@@ -10,3 +10,4 @@
 # P # put before cursor
 # v # visual mode
 # go to visual mode use arrows to highlight and press y to yank highlighted text and use p to put.
+# :%s/lol/LOL # substitute lol with LOL inside vim
