@@ -14,7 +14,8 @@
 # groupdel ironmangroup # delete group
 
 # USERMOD
-# usermod -G supergroup ironman # add ironman to supergroup
+# usermod -aG supergroup ironman # add ironman to supergroup
+# grep supergroup /etc/group
 
 # FILES TO VIEW USER INFO
 # cat /etc/passwd # show users info
@@ -46,3 +47,10 @@
 # SU
 # su - username # login as username
 # su - # login as root
+
+# SUDO
+# Note: To provide sudo access to a user we need to either edit the visudo file to grant him permission or add the user to wheel group
+# Note: Wheel group has all pemisions
+# visudo # show sudo info, edit this to grant permissions to users
+# username ALL=(ALL)  ALL # will allow username to run all commands anywhere
+# usermod -aG wheel username
