@@ -25,7 +25,7 @@
 # _sshd:*:75:75:sshd Privilege separation:/var/empty:/usr/bin/false # username, password, user id, group id, description, home dir, shell used by _sshd
 # wheel:*:0:root # group name, group pass, group id, root is also part of the group
 
-# useradd -g superherogrp -s /bin/bash -c "Iron Man" -m -d /home/ironman ironman
+# useradd -g superherogrp -s /bin/bash -c "Iron Man" -m -d /home/ironman ironman # add user to group superherogrp, -s to give shell permission, -c is the description. -m for create home -d for home dir
 
 # CHANGE PASSWORD
 # passwd newpass # set the password for the current logged in user
