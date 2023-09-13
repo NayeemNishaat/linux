@@ -11,3 +11,7 @@
 # ll | grep file$ # return lines where the lines contain words that end with file
 # grep -o it file
 # dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' # -A 3 -> display after 3 lines, -B 2 -> display before 2 lines
+
+# EGREP
+# Note: Used for searching multiple words
+# egrep -i "it|abc" file # will search it and abc
