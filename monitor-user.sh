@@ -5,3 +5,4 @@
 # finger # provide info of logged in users
 # id # provides info of the current user
 # id root # provides info of the root user
+# users # get active users
