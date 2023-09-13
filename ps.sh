@@ -4,4 +4,4 @@
 # ps ax # shows all running processes
 # ps -ef # shows all running processes in full format listing
 # ps -u root # get all processes of root
-# ps -ef | grep 123
+# ps -ef | grep node
