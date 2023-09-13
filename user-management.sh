@@ -2,6 +2,7 @@
 # USERADD
 # useradd ironman # add user
 # id ironman # check if user created
+# dscacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9][0-9]' # get all users in the host
 
 # GROUPADD
 # groupadd superheros # add group
