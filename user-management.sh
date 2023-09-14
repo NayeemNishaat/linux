@@ -55,3 +55,4 @@
 # visudo # show sudo info, edit this to grant permissions to users
 # username ALL=(ALL)  ALL # will allow username to run all commands anywhere
 # usermod -aG wheel username
+# su -s # get super user access to current account
