@@ -15,3 +15,6 @@
 # HOSTNAMECTL
 # hostnamectl - set-hostname newhostname
 # Note: hostname is stored in /etc/hostname (linux 7)
+
+# SOS
+# sosreport # generate sos report
