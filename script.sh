@@ -133,11 +133,33 @@ esac
 #! /bin/bash
 # Author: Nayeem
 
-ping -c1 192.168.1.1
+host="192.168.1.1"
+ping -c1 $host &> /dev/null
 
 if [ $? -eq 0  ] # $? -> exit status of the last command
   then
-    echo OK
+    echo $host OK
   else 
-    echo Fail
+    echo $host Fail
 fi
+
+
+#! /bin/bash
+# Author: Nayeem
+
+file="./hosts"
+# 192.168.1.1
+# 192.168.1.188
+# 192.168.11.1
+
+for ip in $(cat $file)
+do
+  ping -c1 $ip &> /dev/null
+
+  if [ $? -eq 0  ]
+    then
+      echo OK
+    else 
+      echo Fail
+  fi
+done
