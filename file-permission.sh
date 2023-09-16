@@ -6,6 +6,14 @@
 # chmod a+x file # give execute permission to all
 # chmod g-w file # remove write permission form group
 
+# Remarks:
+# x in dir means we can go inside the dir (if dir doesn’t have x permission we can’t do any r,w,x)
+# r in dir means we can list the items of the dir (no r means we cant’s in 1st level)
+# w in dir means we can create/delete file/dir inside the dir (no w means we cant’s in 1st level)
+# r in file means we can read the file 
+# w in file means we can update/delete the file
+# x in file means it can be executed
+
 # NUMERIC PERMISSION
 # 0 -> no permission
 # 1 -> execute
