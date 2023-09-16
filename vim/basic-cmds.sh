@@ -1,6 +1,7 @@
 # vi file # create file
 # :%d # delete all
 # u # undo
+# control + r # redo
 # :w # write/save
 # shift + z z # write and quit
 # yy # yank/copy line
