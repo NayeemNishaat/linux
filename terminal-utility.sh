@@ -17,3 +17,8 @@
 # history # will provide user session history
 # history -23 # will remove history number 23
 # history -c # will clear entire history
+
+# SHELL
+# echo $0 # get the current shell
+# cat /etc/shells # get the list of all available shells
+# cat /etc/passwd # get user’s shell
