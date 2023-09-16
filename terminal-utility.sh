@@ -14,8 +14,10 @@
 # script script_name.log # will create a script file containing all the logs of the user session
 
 # HISTORY
+# Note: history location -> /home/username/.bash_history
 # history # will provide user session history
-# history -23 # will remove history number 23
+# history -5 # view last 5 history commands
+# !100 # will run 100th command from history
 # history -c # will clear entire history
 
 # SHELL
