@@ -11,3 +11,10 @@
 # v # visual mode
 # go to visual mode use arrows to highlight and press y to yank highlighted text and use p to put.
 # :%s/lol/LOL # substitute lol with LOL inside vim
+
+# dw # delete word and spaces from cursor to end
+# dW # delete non-whitespace then spaces right of cursor
+# diw # delete the letters on both sides of cursor
+# daw # delete whole word including spaces after the word
+# daW # delete all non-whitespace on both sides of cursor then spaces on the right
+# diW # delete all non-whitespace on both sides of cursor
