@@ -127,3 +127,17 @@ case $choice in
   d) ls;;
   *) echo Invalid Choice
 esac
+
+
+
+#! /bin/bash
+# Author: Nayeem
+
+ping -c1 192.168.1.1
+
+if [ $? -eq 0  ] # $? -> exit status of the last command
+  then
+    echo OK
+  else 
+    echo Fail
+fi
