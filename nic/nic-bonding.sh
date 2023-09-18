@@ -48,3 +48,6 @@
 # ifconfig or ifconfig | more
 # Use following command to view bond interface settings like bonding mode & slave interface
 # cat /proc/net/bonding/bond0
+
+# MAC
+# networksetup -listallhardwareports
