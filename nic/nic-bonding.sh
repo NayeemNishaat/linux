@@ -9,7 +9,7 @@
 # TYPE=Bond
 # NAME=bond0
 # BONDING_MASTER=yes
-# BOOTPROTO=none
+# BOOTPROTO=none # or static
 # ONBOOT=yes
 # IPADDR=192.168.1.80
 # NETMASK=255.255.255.0
