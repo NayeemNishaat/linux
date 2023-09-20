@@ -1,9 +1,15 @@
 # yum install httpd # redhat
+# yum remove bind # uninstall a pkg
 # apt-get install # other distros
+
 # rpm -qa # list all installed packages
 # rpm -hiv location.rpm # install downloaded rpm pkg
-# rpm -e pkg
-# yum remove bind # uninstall a pkg
+# rpm -e pkg # uninstall pkg
+# rpm -qi package_full_name # get package info
+# rpm -qc package_full_name # get package config
+
+# which ksh # /usr/bin/ksh
+# rpm -qf /usr/bin/ksh # will provide the pkg for the command
 
 # SET LOCAL REPO ON RED HAT
 # cd /etc/yum.repos.d
