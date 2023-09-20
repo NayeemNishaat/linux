@@ -10,6 +10,8 @@
 
 # which ksh # /usr/bin/ksh
 # rpm -qf /usr/bin/ksh # will provide the pkg for the command
+# apt-file /bin/progname
+# yum whatprovides /bin/progname
 
 # SET LOCAL REPO ON RED HAT
 # cd /etc/yum.repos.d
