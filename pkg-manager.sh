@@ -1,5 +1,8 @@
 # yum install httpd # redhat
 # yum remove bind # uninstall a pkg
+# yum history # get yum history info
+# yum history undo history-id # rollback a pkg/patch
+# yum history undo 16 # rollback a pkg/patch (undoing yum update is not recommended)
 # apt-get install # other distros
 
 # rpm -qa # list all installed packages
