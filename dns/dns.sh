@@ -33,7 +33,7 @@ touch reverse.lab
 # EDIT FORWARD ZONE FILE
 $TTL 86400
 @ IN SOA masterdns.lab.local. root.lab.local. (
-2011071001 ;Serial # serial number has to be updated for each edit
+2011071001 ;Serial # serial number has to be updated for each edit and restart/reload named service
 3600 ;Refresh
  1800 ;Retry
 604800 ;Expire
