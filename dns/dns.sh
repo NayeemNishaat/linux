@@ -33,7 +33,7 @@ touch reverse.lab
 # EDIT FORWARD ZONE FILE
 $TTL 86400
 @ IN SOA masterdns.lab.local. root.lab.local. (
-2011071001 ;Serial
+2011071001 ;Serial # serial number has to be updated for each edit
 3600 ;Refresh
  1800 ;Retry
 604800 ;Expire
@@ -67,13 +67,13 @@ masterdns IN A 192.168.1.29
 # systemctl start named
 # systemctl enable named
 
-# ALLOW PORT VIA FIREWALL
+# ALLOW PORT 53 VIA FIREWALL
 
 # Configuring Permissions, Ownership, and SELinux
 # chgrp named -R /var/named
 # chown -v root:named /etc/named.conf
-# restorecon -rv /var/named
-# restorecon /etc/named.conf
+# restorecon -rv /var/named # for selinux
+# restorecon /etc/named.conf # for selinux
 
 
 # Test DNS configuration and zone files for any syntax errors
@@ -86,7 +86,7 @@ masterdns IN A 192.168.1.29
 # DNS=192.168.1.29
 
 # Restart network service
-# systemctl restart network
+# systemctl restart network (This will also reset the /etc/resolv.conf)
 # systemctl restart NetworkManager.service (For CentOS8)
 
 # Modify /etc/resolv.conf
