@@ -21,3 +21,11 @@
 
 # BC
 # bc # opens calculator and provide expression to evaluate
+
+# TIMEDATECTL
+# timedatectl # check time status
+# timedatectl list-timezones
+# timedatectl set-timezone "time zone"
+# timedatectl set-time YYYY-MM-DD
+# timedatectl set-time "YYYY-MM-DD HH:MM:SS"
+# timedatectl set-ntp true # synchronize ntp
