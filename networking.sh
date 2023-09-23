@@ -36,3 +36,11 @@
 # nmcli connection reload
 # systemctl reboot
 # ip address show
+
+# NSLOOKUP
+# nslookup 172.217.170.206
+# nslookup # enter hostname
+
+# DIG
+# dig 172.217.170.206
+# dig github.com
