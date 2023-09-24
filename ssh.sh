@@ -8,3 +8,8 @@
 # Port 12213
 
 # systemctl restart sshd
+
+# SSH WITH KEY
+# ssh-keygen # generate ssh key
+# ssh-copy-id username@server_ip
+# cat /root/.ssh/authorized_keys # check the copied key in the server
