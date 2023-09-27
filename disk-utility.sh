@@ -1,6 +1,3 @@
-# DF
-# df -h # get disk info in human readable format
-
 # DU
 # du -sh # get current folder size
 # du -sh /Users/labyrinth/Downloads # get /Users/labyrinth/Downloads folder size
@@ -11,3 +8,6 @@
 
 # FDISK
 # fdisk -l # show disk partitions
+
+# DF
+# df -h # get disk info in human readable format
