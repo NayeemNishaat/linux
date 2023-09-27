@@ -1,5 +1,6 @@
 # UNAME
 # uname -a # get sys info
+# lsb_release -a # get distro info - ubuntu
 
 # DMIDECODE
 # dmidecode # get more info about system
