@@ -104,3 +104,19 @@
 # lvextend -L+1024M /dev/mapper/vg_name-lv_name # get the fs name from df -h
 
 # xfs_growfs /dev/mapper/vg_name-lv_name # extend the file system
+
+# EXTEND SWAP SIZE
+# free -m # show memory info
+# dd if=/dev/zero of=/newswap bs=1M count=1024 # create new swap file
+# chmod go-r newswap
+# mkswap /newswap # create new swap from swap file
+#  swapon /newswap # extend the swap
+
+# Note: Enable new swap in boot time
+# vi /etc/fstab # append following command
+# /newswap	swap		swap		defaults	0	0
+
+# Note: Remove swap
+# swapoff /newswap # disable swap
+# rm /newswap # remove swap file
+# delete swap entry from /etc/fstab
