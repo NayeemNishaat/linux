@@ -18,7 +18,7 @@
 # n -> add new partition
 # p -> primary partition type
 # Rest are default
-# w -> write table to disk and exit (to change the partion system id type "t" and provide hex code "8e" to check hex code type L. hit p to see details and finally typw w and enter to write)
+# w -> write table to disk and exit
 
 # Note: Create a new File System from the partition
 # fdisk -l # show available volums
@@ -37,3 +37,41 @@
 # Note Unmount
 # umount /data
 # mount -a # will mount all described in /etc/fstab
+
+
+# ADD DISK AND CREATE NEW LVM PARTITION
+# fdisk -l # show hard disks
+
+# Note: Create a new partition
+# fdisk /dev/sdb # this will go to interactive mode (type help/m to get help menu)
+# In the interactive shell:
+# n -> add new partition
+# p -> primary partition type
+# Rest are default
+# t -> to change the partion system id
+# 8e -> Hex Code for Linux LVM (type L to see all codes)
+# p -> View the selected details
+# w -> Write the changes
+
+# Note: Create a physical volume
+# pvcreate /dev/sdc1
+
+# pvdisplay # show partition volumes
+
+# Note: Create volume group
+# vgcreate vol_grp_name /dev/sdc1
+# vgdisplay vol_grp_name # show vol group info
+
+# Note: Create logical volume
+# lvcreate -n logical_vol_name --size 1000M vol_grp_name
+
+# Note: Assign file system
+# mkfs.xfs /dev/vol_grp_name/logical_vol_name
+
+# Note: Mount FS
+# mkdir /lvm
+# mount /dev/vol_grp_name/logical_vol_name /lvm
+
+# Note: Mount at boot
+# vi /etc/fstab
+# /dev/vol_grp_name/logical_vol_name /lvm xfs 0 0
