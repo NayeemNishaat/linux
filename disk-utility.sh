@@ -10,7 +10,7 @@
 # df -h # get disk info in human readable format
 
 # FDISK
-# fdisk -l # show disk partitions
+# fdisk -l # show hard disks
 
 # Note: Create a new partition
 # fdisk /dev/sdb # this will go to interactive mode (type help/m to get help menu)
@@ -18,7 +18,7 @@
 # n -> add new partition
 # p -> primary partition type
 # Rest are default
-# w -> write table to disk and exit
+# w -> write table to disk and exit (to change the partion system id type "t" and provide hex code "8e" to check hex code type L. hit p to see details and finally typw w and enter to write)
 
 # Note: Create a new File System from the partition
 # fdisk -l # show available volums
