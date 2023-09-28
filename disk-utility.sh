@@ -59,19 +59,48 @@
 # pvdisplay # show partition volumes
 
 # Note: Create volume group
-# vgcreate vol_grp_name /dev/sdc1
-# vgdisplay vol_grp_name # show vol group info
+# vgcreate vg_name /dev/sdc1
+# vgdisplay vg_name # show vol group info
 
 # Note: Create logical volume
-# lvcreate -n logical_vol_name --size 1000M vol_grp_name
+# lvcreate -n lv_name --size 1000M vg_name
 
 # Note: Assign file system
-# mkfs.xfs /dev/vol_grp_name/logical_vol_name
+# mkfs.xfs /dev/vg_name/lv_name
 
 # Note: Mount FS
 # mkdir /lvm
-# mount /dev/vol_grp_name/logical_vol_name /lvm
+# mount /dev/vg_name/lv_name /lvm
 
 # Note: Mount at boot
 # vi /etc/fstab
-# /dev/vol_grp_name/logical_vol_name /lvm xfs 0 0
+# /dev/vg_name/lv_name /lvm xfs 0 0
+
+# Note: extend existing lvm group (add new lvm valume to the lvm volume group)
+# Key: Create a new lvm partition
+# fdisk /dev/sdb # this will go to interactive mode (type help/m to get help menu)
+# In the interactive shell:
+# n -> add new partition
+# p -> primary partition type
+# Rest are default
+# t -> to change the partion system id
+# 8e -> Hex Code for Linux LVM (type L to see all codes)
+# p -> View the selected details
+# w -> Write the changes
+
+# reboot to let the system read the new disk info
+# fdisk -l /dev/sdd1
+
+# pvdisplay # get desired pv and vg name
+# pvs # get summary of vol groups and physical vols
+
+# pvdisplay vg_name # display volume group info
+
+# Note: Create physical vol from the newly created partition
+# pvcreate /dev/sdd1
+
+# vgextend vg_name /dev/sdd1
+
+# lvextend -L+1024M /dev/mapper/vg_name-lv_name # get the fs name from df -h
+
+# xfs_growfs /dev/mapper/vg_name-lv_name # extend the file system
