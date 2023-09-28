@@ -120,3 +120,30 @@
 # swapoff /newswap # disable swap
 # rm /newswap # remove swap file
 # delete swap entry from /etc/fstab
+
+
+# STRATIS
+# dnf install stratis-cli stratisd -y
+# systemctl enable stratisd
+# systemctl start stratisd
+
+# lsblk # list block device
+# stratis pool create pool1 /dev/sdb # create new stratis pool pool1
+# stratis pool list # show pools
+# stratis pool add-data pool1 /dev/sdc
+
+# stratis filesystem create pool1 fs1 # create new filesystem fs1 using pool1 (thin provisioned - 546MB)
+# stratis filesystem list # show filesystems
+
+# mkdir /bigdata
+# mount /dev/stratis/pool1/fs1 /bigdata # get the fs name from stratis filesystem list
+
+# lsblk # list block storages
+# stratis filesystem list # show actual size
+
+# stratis filesystem snapshot pool1 fs1 fs1-snap # take snapshot of a filesystem
+# stratis filesystem list # show newly created snaps, size and UUID
+
+# Note: Mount stratis fs on boot
+# vi /etc/fstab
+# UUID="3thb56sgdk78ds8dvshg" /bigdata xfs defaults,x-systemd.requires=stratisd.service 0 0
