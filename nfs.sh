@@ -10,6 +10,7 @@
 # chmod a+rwx /nfs-dir
 
 # ADD NFS SHARED FS
+# Remark: create a backup, /etc/exports
 # vi /etc/exports # add following line:
 # /nfs-dir 192.168.12.3 (rw,sync,no_root_squash) # for a specific ip
 # /nfs-dir * (rw,sync,no_root_squash) # for all ips
