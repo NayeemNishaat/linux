@@ -147,3 +147,12 @@
 # Note: Mount stratis fs on boot
 # vi /etc/fstab
 # UUID="3thb56sgdk78ds8dvshg" /bigdata xfs defaults,x-systemd.requires=stratisd.service 0 0
+
+
+# df -T # get fs types
+# fsck /dev/sdb1 # repair non xfs file system
+
+# Warning: Before running xfs_repair unmount the file system
+# umount /data # Copy the file system info of the /data mount point to mount it again later
+# xfs_repair /dev/sdb1
+# echo $? # get exist status of last cmd (0 -> success else fail)
