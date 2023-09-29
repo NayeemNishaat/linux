@@ -1,1 +1,1 @@
-Test
+allow samba through firewall
