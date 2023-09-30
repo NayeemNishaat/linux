@@ -45,4 +45,4 @@
 
 # UMASk
 # Note: It's used to set default permission to newly created file/dir
-# umask u+rw,g+r,o-rwx
+# umask u+rw,g+r,o-rwx # set this on bashrc to persist
