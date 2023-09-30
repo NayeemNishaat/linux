@@ -42,3 +42,7 @@
 # setfacl -b /path/to/file # remove all entries for all users
 # write permission with acl won't allow to delete the file but write. + will be added if contains acl in permission column
 # getfacl file # get file acl
+
+# UMASk
+# Note: It's used to set default permission to newly created file/dir
+# umask u+rw,g+r,o-rwx
