@@ -9,6 +9,7 @@ git gc --aggressive --prune=now
 
 # REBASE
 git rebase --root
+git rebase -i HEAD~4 # Keep only last 4 commits
 
 # Remove All Old Commits
 git checkout --orphan newBranch
