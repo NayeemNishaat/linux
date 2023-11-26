@@ -4,5 +4,8 @@ git stash drop stash@{n}  # drop specific stash
 git stash list            # Show stash list
 git stash clear           # Drop all stashes
 
-# Cleanup
+# CLEANUP
 git gc --aggressive --prune=now
+
+# REBASE
+# git rebase --root
