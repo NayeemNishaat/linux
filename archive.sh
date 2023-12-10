@@ -3,7 +3,7 @@
 # tar --exclude tar  -cvf f.tar . # exclude a file
 # tar -tvf f.tar # show the contents of tar file
 # tar -xvf f.tar # extract from tar ball
-# tar -czvf f.gz .
+# tar -czvf f.gz . # create gz archive
 
 # GZIP
 # gzip f.tar # compress tar file
