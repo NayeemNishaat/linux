@@ -9,6 +9,10 @@ git gc --aggressive --prune=now
 
 # CLEAN
 git clean -f # Clean all untracked files
+git clean -df # Remove untracked files and dirs from the working tree
+
+# CHECKOUT
+git checkout -- . # git checkout branch-name directory-or-file-name in general, you get the HEAD version of directory-or-file-name on branch branch-name, -- indicates explicit about the fact that you're not specifying the branch name
 
 # REBASE
 git rebase --root
