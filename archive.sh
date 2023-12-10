@@ -1,6 +1,7 @@
 # TAR
 # tar -cvf f.tar . # create tar archive with compress and verbose
 # tar --exclude file -cvf f.tar . # exclude a file
+tar --exclude='./folder' --exclude='./upload/folder2' -zcvf /backup/filename.tgz .
 # tar -tvf f.tar # show the contents of tar file
 # tar -xvf f.tar # extract from tar ball
 # tar -czvf f.gz . # create gz archive
