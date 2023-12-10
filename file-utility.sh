@@ -49,6 +49,7 @@
 # mv a ../
 # mv a ../b
 # mv a b c ./abc
+# mv !(charge|charge) charge # This will move everything to charge folder except the charge folder itself
 
 # MKDIR
 # mkdir folder
