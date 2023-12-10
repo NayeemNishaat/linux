@@ -9,7 +9,7 @@
 # gzip f.tar # compress tar file
 # gzip -9 f.tar # highest compression level
 # gzip -d f.tar.gz # decompress tar file
-# gunzip f.tar.gz # decompress tar file
+# gunzip f.tar.gz # decompress tar file same as above command
 # tar -czvf file.tar.gz . # gzip with compression level 1
 # tar -ztvf projects.tar.gz # list gzip (-z is optional)
 # tar -xzvf projects.tar.gz -C /tmp/ # extract to the /tmp/ dir
