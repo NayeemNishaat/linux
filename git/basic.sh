@@ -34,3 +34,4 @@ git restore path/to/file/to/revert # Restore a specific file
 # CLONE
 git clone --depth 1 https://github.com/user/repo.git
 git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/user/repo.git
+git clone -b main --single-branch [repo] --depth 1
