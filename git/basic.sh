@@ -30,3 +30,7 @@ git gc --aggressive --prune=all     # remove the old files
 # RESTORE
 git restore . # Restore all unstaged changes in cwd
 git restore path/to/file/to/revert # Restore a specific file
+
+# CLONE
+git clone --depth 1 https://github.com/user/repo.git
+git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/user/repo.git
