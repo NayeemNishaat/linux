@@ -38,3 +38,8 @@ gpgcheck=0
 # du -sh /var/cache/apt
 # apt-get remove package-1 package-2
 # apt-get autoremove
+
+# KERNELS
+dpkg -l | grep linux-image | awk '{print$2}' | wc -l
+dpkg -l | grep linux-image | awk '{print$2}'
+apt remove --purge kernel-name -y; # remove kernel
