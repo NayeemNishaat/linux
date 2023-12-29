@@ -43,3 +43,4 @@ gpgcheck=0
 dpkg -l | grep linux-image | awk '{print$2}' | wc -l
 dpkg -l | grep linux-image | awk '{print$2}'
 apt remove --purge kernel-name -y; # remove kernel
+sudo apt purge linux-headers-5.6.11-050611; # remove kernel
