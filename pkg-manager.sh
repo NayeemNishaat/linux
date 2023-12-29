@@ -26,8 +26,15 @@ baseurl=file:///localrepo # /localrepo is the repo location
 enabled=1
 gpgcheck=0
 
+
 # install createrepo
 # createrepo /localrepo
-# yum clean all # clear cache from old repo
 # yum repolist all # get all repo list
 # yum install tomcat # test local repo
+
+# CLEANUP
+# yum clean all # clear cache from old repo
+# apt-get clean
+# du -sh /var/cache/apt
+# apt-get remove package-1 package-2
+# apt-get autoremove
