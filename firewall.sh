@@ -54,3 +54,20 @@ sudo ufw delete 2
 sudo ufw delete allow "Apache Full"
 sudo ufw delete allow http
 sudo ufw delete allow 80
+
+# IP Tables
+sudo iptables -A INPUT -p tcp -s 203.0.113.0/24 --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -s 203.0.113.51 -j DROP
+sudo iptables -A INPUT -s 203.0.113.51 -j REJECT
+iptables -A INPUT -i eth0 -s 203.0.113.51 -j DROP
+sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp -s 203.0.113.0/24 --dport 3306 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 3306 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+iptables -L -v
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
+iptables -D INPUT 2
+iptables-save > /etc/iptables.rules
+iptables-restore < /etc/iptables.rules
