@@ -29,3 +29,28 @@ firewall-cmd --remove-icmp-block-inversion
 
 host -ta fb.com # get ip of a host
 firewall-cmd --direct --add-rule ipv4 filter OUTPUT 0 -d 157.240.7.35 -j DROP
+
+# UFW
+sudo ufw reload
+sudo ufw disable
+sudo ufw enable
+sudo ufw reset
+sudo ufw status verbose
+sudo ufw allow OpenSSH
+sudo ufw allow ssh
+sudo ufw allow 22
+sudo ufw app list
+sudo ufw allow 6000:6007/tcp
+sudo ufw allow 6000:6007/udp
+sudo ufw allow from 203.0.113.4
+sudo ufw allow from 203.0.113.4 to any port 22
+sudo ufw allow from 203.0.113.0/24 to any port 22
+sudo ufw allow in on eth1 to any port 3306
+sudo ufw deny http
+sudo ufw deny from 203.0.113.4
+sudo ufw deny out 25 # block outgoing connections from the server on port 25
+sudo ufw status numbered
+sudo ufw delete 2
+sudo ufw delete allow "Apache Full"
+sudo ufw delete allow http
+sudo ufw delete allow 80
