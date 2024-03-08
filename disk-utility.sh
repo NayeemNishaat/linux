@@ -6,6 +6,8 @@
 du -hd 1 # get only all dirs size at depth 1
 du -ahd 1 # get all files and dirs size at depth 1
 # du -hd 1 -t 300M # get files greater than 500M at depth 1 (all dir/file of current dir)
+# find / -size +1M
+# find / -type f -size +50M -exec du -h {} \; | sort -n
 
 # DF
 # df -h # get disk info in human readable format
