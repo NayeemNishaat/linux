@@ -5,3 +5,4 @@
 # find ../.. -samefile fxx # find hardlinks
 # find ../.. -inum 20948039 # find file with same inode number (hard link)
 # find . -name *.js -size +1M -ls
+# sudo find . -name '*WenttoPakista*.mp4' -o -name '*IAMtheeart*.mp4'
