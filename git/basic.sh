@@ -32,6 +32,7 @@ git restore . # Restore all unstaged changes in cwd
 git restore path/to/file/to/revert # Restore a specific file
 
 # CLONE
-git clone --depth 1 https://github.com/user/repo.git
+git clone --depth 1 https://github.com/user/repo.git # Warning: Doing so will cause issue when trying to push repo to ther git providers
+git fetch --unshallow # To get all the objects
 git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/user/repo.git
 git clone -b main --single-branch [repo] --depth 1
