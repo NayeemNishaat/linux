@@ -9,3 +9,4 @@ sudo find . -name '*WenttoPakista*.mp4' -o -name '*IAMtheeart*.mp4'
 find . -name "*M*" ! -name "Mov*" -maxdepth 1
 find . -path './baas/treeQL' -prune -o -path './baas/*' # don't find inside ./baas/treeQL but ./baas/*
 find . -name "*M*" | xargs ls -ltr
+find . -name "*M*" -exec ls -l {} \; | sort -k6r
