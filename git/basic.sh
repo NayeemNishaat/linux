@@ -36,3 +36,5 @@ git clone --depth 1 https://github.com/user/repo.git # Warning: Doing so will ca
 git fetch --unshallow # To get all the objects
 git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/user/repo.git
 git clone -b main --single-branch [repo] --depth 1
+
+# Important: Dubious Ownership means current user doesn't have permission to the git repo folder.
