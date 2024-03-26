@@ -11,3 +11,6 @@
 # ll | cut -d ' '  -f 2 # space delimiter
 # ll | cut -d$'\t'  -f 1 # tab delimiter (Press Ctrl+V and then Tab to use "verbatim" quoted insert.)
 # ll | cut -f 1 # tab is default
+
+# PASTE
+# echo "12\n3" | paste -sd+ - | bc
