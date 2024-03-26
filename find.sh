@@ -11,3 +11,4 @@ find . -path './baas/treeQL' -prune -o -path './baas/*' # don't find inside ./ba
 find . -name "*M*" | xargs ls -ltr
 find . -name "*M*" -exec ls -l {} \; | sort -k6r # Note: Apply exect command to each element
 find . -name '*.mp4' -exec du -ch {} + | grep total$ # Note: + means apply exec command to the combined elements
+find . -name '*.mp4' -exec du -ch {} + | grep total$ | cut -f1 | paste -sd+ - | bc
